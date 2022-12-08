@@ -1,6 +1,6 @@
 --Создаем представления dbo.vw_SKUPriceв (view)
 create view dbo.vw_SKUPriceв as
-select *, dbo.udf_GetSKUPrice(ID_SKU)
+select s.Code, s.Name, dbo.udf_GetSKUPrice(ID_SKU) as cost
 from dbo.SKU as s
 	join
 	dbo.Basket as b
