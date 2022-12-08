@@ -1,4 +1,4 @@
--- Создание схемы onboarding
+-- Создание схемы dbo
 if not exists (
 	select 1
 	from sys.schemas
