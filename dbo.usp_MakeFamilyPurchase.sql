@@ -9,4 +9,4 @@ if (@FamilySurName in (select FamilySurName
 									from dbo.Basket)
 	where FamilySurName = @FamilySurName
 else
-	raiserror ('Такой семьи нет!!!')
+	raiserror ('Такой семьи нет!!!', 11, 1)
