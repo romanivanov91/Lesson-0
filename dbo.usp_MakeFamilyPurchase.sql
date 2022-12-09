@@ -8,5 +8,5 @@ if (@FamilySurName in (select FamilySurName
 	set BudgetValue = BudgetValue - (select sum(Value)
 									from dbo.Basket)
 	where FamilySurName = @FamilySurName
-	else
-	print 'Такой семьи нет!!!'
+else
+	raiserror ('Такой семьи нет!!!')
